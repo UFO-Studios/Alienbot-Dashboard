@@ -14,6 +14,12 @@ export default function Home() {
         </div>
 
         <div className="ultraCenter">
+          <a href="/botStats" class="bn13">
+            See bot stats
+          </a>
+        </div>
+
+        <div className="ultraCenter">
           <a href="https://thealiendoctor.com/addAlienBot" class="bn13">
             Add to your server
           </a>
