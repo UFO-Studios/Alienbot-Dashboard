@@ -1,3 +1,3 @@
 # Alienbot-Dashboard
 
-Built in react
+Built using react wth nextjs
