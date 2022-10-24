@@ -4,10 +4,9 @@ import {
   VictoryAxis,
   VictoryLine,
   VictoryLabel,
-  VictoryScatter
+  VictoryScatter,
 } from "victory";
 import moment from "moment";
-//import "./styles.css";
 
 const Users = () => {
   const prev = [
@@ -16,14 +15,14 @@ const Users = () => {
     { x: "2020-03", y: 3.87543 },
     { x: "2020-04", y: 1.1251 },
     { x: "2020-05", y: 2.123241 },
-    { x: "2020-06", y: 3.5231 }
+    { x: "2020-06", y: 3.5231 },
   ];
 
   const curr = [
     { x: "2020-03", y: 4.54332 },
     { x: "2020-04", y: 2.125642 },
     { x: "2020-05", y: 3.12451 },
-    { x: "2020-06", y: 3.1234 }
+    { x: "2020-06", y: 3.1234 },
   ];
 
   const xAxisLabelFormatter = (tick, index, ticks) => {
@@ -41,7 +40,7 @@ const Users = () => {
     "2020-03",
     "2020-04",
     "2020-05",
-    "2020-06"
+    "2020-06",
   ];
 
   return (

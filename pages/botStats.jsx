@@ -1,11 +1,8 @@
 import Head from "next/head";
-import React from 'react';
-import ReactDOM from 'react-dom';
-import * as Victory from 'victory';
-import { VictoryBar } from "victory";
-import Users from "./api/botStats/users.js"
+import React from "react";
+import Users from "../components/users";
 
-export default function Home() {
+export default function botStats() {
   return (
     <div>
       <Head>
@@ -14,7 +11,7 @@ export default function Home() {
 
       <div>
         <h1 className="white">Current users</h1>
-        <Users/>
+        <Users />
       </div>
     </div>
   );
