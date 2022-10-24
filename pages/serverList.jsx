@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/serverList.module.css";
-import { useSession, signIn, Sign } from "next-auth/react";
+import { useSession, signIn, signIn } from "next-auth/react";
 
 export default function serverList() {
   const { data: session } = useSession();
@@ -14,5 +14,9 @@ export default function serverList() {
       </>
     );
   }
-  return <>{signIn()}</>;
+  return (
+    <>
+      <button onClick={() => signIn()}>Login In</button>
+    </>
+  );
 }
