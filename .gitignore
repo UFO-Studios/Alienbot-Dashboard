@@ -27,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+config.json
 
 # vercel
 .vercel
@@ -34,3 +35,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#AW2C - DO NOT EDIT!
+.AW2C
+.aw2c
+./mtDt/
