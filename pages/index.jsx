@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -14,15 +15,15 @@ export default function Home() {
         </div>
 
         <div className="ultraCenter">
-          <a href="https://thealiendoctor.com/addAlienBot" class="bn13">
+          <Link href="https://thealiendoctor.com/addAlienBot" class="bn13">
             Add to your server
-          </a>
+          </Link>
         </div>
 
         <div className="ultraCenter">
-          <a href="/serverList" class="bn13">
+          <Link href="/serverList" class="bn13">
             Configure your bot
-          </a>
+          </Link>
         </div>
       </div>
     </div>
