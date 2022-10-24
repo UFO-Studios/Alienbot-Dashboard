@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require(".../config.json")
 
 const connectToDB = async () => {
     await mongoose.connect(config.MONGO_CONFIG);
@@ -16,12 +17,15 @@ const connectToDB = async () => {
     OnlineUserCount: Number
   });
 
+  const UCModule = mongoose.model("OUD", userCountSchema); //OUD stands for Online User Data. This is only used for saving. Probably
+  //const OUC = UCModule({DATA_HERE})
+
   //END schema-users
 
   //START getUserCount
 
   /**
- *  @example const userCount = await getUserCount();
+ *  @example const onlineUserCount = await getUserCount();
  *  @returns {Number} No. of online users.
  **/
  const getUserCount = async () => {
@@ -30,12 +34,14 @@ const connectToDB = async () => {
       await connectToDB() 
     }
     
-    let date = new Date().toLocaleDateString();
+    let GMTdate = new Date().toLocaleDateString();
+    const OUC = await lvl_module.findOne({ date: GMTdate });
+//OUC is Online User Count
     
     
     
     console.log("Data recived from DB!")
-    return userXP
+    return OUC
   };
 
   //END getUserCount
