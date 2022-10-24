@@ -6,7 +6,7 @@ export default NextAuth({
     DiscordProvider({
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      scope: "identify email guilds"
+      scope: "identify email guilds",
     }),
   ],
 });
