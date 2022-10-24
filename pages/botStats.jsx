@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as Victory from 'victory';
 import { VictoryBar } from "victory";
+import Users from "./api/botStats/users.js"
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
 
       <div>
         <h1 className="white">Current users</h1>
-        <VictoryBar/>
+        <Users/>
       </div>
     </div>
   );

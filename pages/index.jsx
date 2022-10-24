@@ -21,6 +21,12 @@ export default function Home() {
         </div>
 
         <div className="ultraCenter">
+          <Link href="/botStats" class="bn13">
+            See Bot Status
+          </Link>
+        </div>
+
+        <div className="ultraCenter">
           <Link href="/serverList" class="bn13">
             Configure your bot
           </Link>
