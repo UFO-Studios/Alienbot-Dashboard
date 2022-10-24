@@ -1,22 +1,11 @@
-import React from "react";
-import Head from "next/head";
-import styles from "../styles/serverList.module.css";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react"
 
-export default function serverList() {
-  const { data: session } = useSession();
+export default function Component() {
+  const { data: session, status } = useSession()
 
-  if (session) {
-    return (
-      <>
-        Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    );
+  if (status === "authenticated") {
+    return <p>Signed in as {session.user.email}</p>
   }
-  return (
-    <>
-      <button onClick={() => signIn()}>Login In</button>
-    </>
-  );
+
+  return <a href="/api/auth/signin">Sign in</a>
 }
