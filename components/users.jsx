@@ -7,12 +7,15 @@ import {
   VictoryScatter,
 } from "victory";
 import moment from "moment";
+const uptime = require("../pages/api/botStats/uptime");
+
+const testData1 = uptime.get();
 
 const Users = () => {
   const prev = [
     { x: "2020-01", y: 1.1235 },
-    { x: "2020-02", y: 4.32332 },
-    { x: "2020-03", y: 3.87543 },
+    { x: "2020-02", y: 1.32332 },
+    { x: "2020-03", y: testData1 },
     { x: "2020-04", y: 1.1251 },
     { x: "2020-05", y: 2.123241 },
     { x: "2020-06", y: 3.5231 },
