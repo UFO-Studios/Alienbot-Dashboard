@@ -1,38 +1,46 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose"); // every file in the api folder is on the server side
+let connected = false;
 
 const connectToDB = async () => {
-    await mongoose.connect(process.env.MONGO_URL);
-    connected = true;
-    console.log("MongoDB is loaded!");
-    db = await mongoose.connection;
-    db.on("error", console.error.bind(console, "MongoDB connection error:")); //tells us if there is an error
-  };
-  //END connect
-  
-//START getStartTime
+  await mongoose.connect(process.env.MONGO_URL); 
+//king?
+  connected = true;
 
-const get = async () => {
+  console.log("MongoDB is loaded!");
+
+  db = await mongoose.connection;
+
+  db.on("error", console.error.bind( 
+    console,
+    "MongoDB connection error:"
+  ));
+};
+
+
+
+/**
+ * @type {Function}
+ */
+async function get () {
        
   if(!connected || !db) {
     await connectToDB() 
-  }
+  };
 
   //Schemas n` stuff
   const uptimeSchema = new mongoose.Schema({
     time: Number
   });
-  const uptimeModule = mongoose.model("uptime", uptimeSchema);
+  const uptimeModule = await mongoose.model("uptime", uptimeSchema);
 
   const botStartTime = await uptimeModule.findOne({});
   
-  console.log("Data recived from DB!")
-  return botStartTime
-
+  //result
+  console.log("Data recived from DB!");
+  return botStartTime;
 };
 
-//END getStartTime
-
-  module.exports; {
-    connectToDB,
-    get
-  }
+module.exports = {
+  connectToDB,
+  get
+}

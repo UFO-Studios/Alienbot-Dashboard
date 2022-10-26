@@ -9,16 +9,18 @@ import {
 import moment from "moment";
 const uptime = require("../pages/api/botStats/uptime");
 
-const testData1 = uptime.get();
+//START chartData
+
+const latestUptime = uptime.get(); // should work now diffrent error woo! lmao fixed thx :D
+//END chartData
 
 const Users = () => {
-  const prev = [
-    { x: "2020-01", y: 1.1235 },
-    { x: "2020-02", y: 1.32332 },
-    { x: "2020-03", y: testData1 },
-    { x: "2020-04", y: 1.1251 },
-    { x: "2020-05", y: 2.123241 },
-    { x: "2020-06", y: 3.5231 },
+  const prev = [ //
+    { x: "2020-01", y: 1.1235 },//1
+    { x: "2020-02", y: 1.32332 },//2
+    { x: "2020-03", y: 1 },//3
+    { x: "2020-04", y: 1.1251 },//4
+    { x: "2020-05", y: 2.123241 },//5
   ];
 
   const curr = [
