@@ -1,7 +1,7 @@
-const mongoose = require("mongoose"); // every file in the api folder is on the server side
+const mongoose = require("mongoose")
 let connected = false;
 
-const connectToDB = async () => {
+const connect = async () => {
   await mongoose.connect(process.env.MONGO_URL); 
 //king?
   connected = true;
@@ -24,7 +24,7 @@ const connectToDB = async () => {
 async function get () {
        
   if(!connected || !db) {
-    await connectToDB() 
+    await connect() 
   };
 
   //Schemas n` stuff
@@ -41,6 +41,6 @@ async function get () {
 };
 
 module.exports = {
-  connectToDB,
+  connect,
   get
 }

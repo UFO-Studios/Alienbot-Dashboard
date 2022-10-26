@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 
+Users {
+  width: auto;
+}
+
 body {
   margin: 0;
   background-color: #000000;

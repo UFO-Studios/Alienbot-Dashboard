@@ -1,6 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import Users from "../components/users";
+
+const allUsers = 188;
+const onlineUsers = 56;
+const testUptime = "2D 17H";
+
 
 export default function botStats() {
   return (
@@ -10,8 +14,10 @@ export default function botStats() {
       </Head>
 
       <div>
-        <h1 className="white">Current users</h1>
-        <Users />
+        <h1 className="white">Alien Bot Dashboard: System Overveiw</h1>
+        <p1 className="white"> Uptime: { testUptime }.</p1>
+        <p1 className="white">  Users: { allUsers }.</p1>
+        <p1 className="white"> Online Users: { onlineUsers }</p1>
       </div>
     </div>
   );
