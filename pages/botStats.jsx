@@ -1,7 +1,8 @@
 import Head from "next/head";
 import React from "react";
+const data = require("../components/dataIn")
 
-const allUsers = 188;
+const allUsers = data.allUsers;
 const onlineUsers = 56;
 const testUptime = "2D 17H";
 
@@ -15,6 +16,7 @@ export default function botStats() {
 
       <div>
         <h1 className="white">Alien Bot Dashboard: System Overveiw</h1>
+        <br></br>
         <p1 className="white"> Uptime: { testUptime }.</p1>
         <p1 className="white">  Users: { allUsers }.</p1>
         <p1 className="white"> Online Users: { onlineUsers }</p1>
