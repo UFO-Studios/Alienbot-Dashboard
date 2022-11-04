@@ -1,6 +1,20 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import styled from "styled-components";
+
+
+const button2 = styled.button`
+  background-color: #bf2e3f;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+`;
+
+const testString = "test";
 
 export default function Home() {
   return (
@@ -9,7 +23,27 @@ export default function Home() {
         <title>AlienBot Dashboard</title>
       </Head>
 
-      <div className={styles.image}>
+      
+      <div
+  style={{
+    '--color-1': 'deepskyblue',
+    '--color-2': 'navy',
+    background: `
+      linear-gradient(
+        170deg,
+        var(--color-1),
+        var(--color-2) 80%
+      )
+    `,
+
+    // Unrelated styles:
+    color: 'white',
+    textAlign: 'center',
+    padding: 30,
+    borderRadius: 12,
+  }}
+>
+<div className={styles.image}>
         <div className="center">
           <h1 className="white">AlienBot Dashboard</h1>
         </div>
@@ -31,7 +65,12 @@ export default function Home() {
             Configure your bot
           </Link>
         </div>
+        <div className="ultraCenter">
+          <button2 href="./botStats.jsx">Test</button2>
+        </div>
+      </div>
       </div>
     </div>
+    
   );
 }
