@@ -6,4 +6,4 @@
 
 # Contributing
 
-Pull Requests are very welcome! If you see anything wrong or misplaced, be sure to open one!
+Pull Requests are very much welcome! If you see anything wrong or misplaced, be sure to open one!

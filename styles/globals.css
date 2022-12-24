@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
 
-
 * {
   font-family: "Inter", sans-serif;
 }
@@ -12,6 +11,24 @@ Users {
 body {
   margin: 0;
   background-color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #bf2e3f;
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.black {
+  color: #000000;
+}
+
+.margin-5 {
+  margin: 5px;
 }
 
 .white {
@@ -36,18 +53,168 @@ Users {
   justify-content: center;
   align-items: center;
 }
+/* 
+.errorBox {
+  background-image: radial-gradient(red, orange);
+  width: 100%;
+}
+
+.errorBox > p > a {
+  color: darkblue;
+} */
+
+.errorBox {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+  background-color: red;
+  border: 4px solid white;
+}
+
+.errorBox:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.errorBox > .container {
+  padding: 2px 16px;
+}
+
+.errorBox > .container > p > a {
+  margin-left: 5px;
+  color: greenyellow;
+}
+
+.popup.error {
+  width: 25rem;
+  height: 10rem;
+  margin: 4rem auto;
+  background-color: #fafafa;
+  box-shadow: 2px 2px 1rem #212121;
+  border-radius: 0.25rem;
+}
+
+.popup.success {
+  width: 25rem;
+  height: 10rem;
+  margin: 4rem auto;
+  background-color: #fafafa;
+  box-shadow: 2px 2px 1rem #212121;
+  border-radius: 0.25rem;
+}
+
+.popup.error .message {
+  background-color: rgb(221, 4, 4);
+  height: 7rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.popup.success .message {
+  background-color: lightgreen;
+  height: 7rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.popup.error .message:before {
+  content: "\f057";
+  font-family: inherit;
+  position: absolute;
+  color: #fafafa;
+  font-size: 10rem;
+  opacity: 0.3;
+  top: -2.5rem;
+  right: -0.5rem;
+}
+
+.popup.success .message:before {
+  content: "\f057";
+  font-family: inherit;
+  position: absolute;
+  color: #fafafa;
+  font-size: 10rem;
+  opacity: 0.3;
+  top: -2.5rem;
+  right: -0.5rem;
+}
+
+.popup.error .message p {
+  padding: 0.5rem;
+  color: #fafafa;
+}
+
+.popup.success .message p {
+  padding: 0.5rem;
+  color: grey;
+}
+
+.popup.error .action {
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  position: relative;
+}
+
+.popup.success .action {
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  position: relative;
+}
+
+.popup.error .action button {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  outline: none;
+  border: 0;
+  background-color: rgb(221, 4, 4);
+  width: 5rem;
+  height: 1.5rem;
+  color: #fafafa;
+  /* text-transform: uppercase; */
+  transition: white 0.2s ease-in-out;
+  border-radius: 0.25rem;
+}
+
+.popup.success .action button {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  outline: none;
+  border: 0;
+  background-color: lime;
+  width: 5rem;
+  height: 1.5rem;
+  color: grey;
+  /* text-transform: uppercase; */
+  transition: white 0.2s ease-in-out;
+  border-radius: 0.25rem;
+}
+
+.popup.error .action button:active {
+  background-color: #ff1900;
+}
+
+.popup.success .action button:active {
+  background-color: rgb(27, 133, 27);
+}
 
 .bn13 {
   display: inline-block;
   padding: 0.65em 1.6em;
-  border: 3px solid #ffffff;
+  border: 3px solid wheat;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: white;
+  color: wheat;
   text-align: center;
   transition: all 0.2s;
   animation: bn13bouncy 5s infinite linear;
@@ -83,4 +250,27 @@ Users {
   100% {
     top: 0em;
   }
+}
+
+.button {
+  background-color: #bf2e3f;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.input {
+  background-color: black;
+  color: wheat;
+  border: 1px solid wheat;
+  outline: none;
+  padding: 5px;
+  margin: 10px;
+}
+
+.wheat {
+  color: rgb(255, 166, 0);
 }
