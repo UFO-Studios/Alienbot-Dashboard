@@ -3,18 +3,8 @@ import Head from "next/head";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-export default function signin() {
+export default function LogIn() {
   const router = useRouter();
-
-  // const discordLogin = (e) => {
-  //   const url = `https://discord.com/api/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fdiscord&response_type=code&scope=identify%20email%20guilds`; // use the state perimeter later on for better security
-
-  //   router.push(url);
-  // };
-
-  // const googleLogin = (e) => {};
-
-  // const twitchLogin = (e) => {};
 
   const { err } = router.query;
   const accNoExists = err == "ACCOUNT_NO_EXIST";
